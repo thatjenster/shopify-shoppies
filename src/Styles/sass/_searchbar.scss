@@ -1,13 +1,18 @@
+.fa-search {
+    color: #fff;
+    padding: 5px 20px;
+}
+
 .search-bar {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 95%;
     padding: 15px;
     border: none;
     outline: none;
     background: none;
     background-color: #ffff;
     border-radius: 10px;
-
+    margin: 0 auto;
     color: grey;
     font-size: 20px;
     font-weight: 400;

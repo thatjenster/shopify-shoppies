@@ -5,6 +5,7 @@
 	width: 100vw;
 	height: 100vh;
 	background-color: $black;
+	overflow-y: scroll;
 }
 
 .popup .content {
@@ -12,7 +13,7 @@
 	width: 100%;
 	max-width: 900px;
 	margin: 0 auto;
-	padding: 25px;
+	padding: 30px;
 	color: #FFF;
 }
 
@@ -26,6 +27,15 @@
 	font: 600 30px $bodyFont;
 }
 
+.popup .content i {
+	color: yellow;
+}
+
+.popup .content .extra {
+	font: 600 15px $bodyFont;
+	padding: 10px 0;
+}
+
 .popup .content .plot {
 	display: flex;
 	flex-wrap: wrap;
@@ -35,33 +45,36 @@
 .popup .content .plot img {
 	flex: 1 1 50%;
 	max-width: 300px;
-	padding: 0px 15px;
-	border: 4px solid $pink;
+	padding: 15px;
+	background-color: white;
+	border: 8px solid $pink;
 	border-radius: 4px;
 }
 
 .popup .content .plot p {
 	flex: 1 1 50%;
 	padding: 15px;
+	font: 400 20px $bodyFont;
+	line-height: 2rem;
 }
 
-.popup .content .close {
+.btn {
 	display: inline-block;
-	padding: 15px 30px;
+	padding: 15px;
 	font-size: 18px;
 	font-weight: 700;
-
-	background: #4484C4;
+	background: $mav;
 	color: #FFF;
 	border-radius: 8px;
 	border: none;
 	outline: none;
 	appearance: none;
 	cursor: pointer;
-
 	transition: 0.4s ease-out;
+	margin: 0 10px;
 }
 
-.popup .content .close:hover {
-	background: #223343;
+.btn:hover,
+.btn:focus {
+	background: $pink;
 }

@@ -4,6 +4,7 @@ import style from './Styles/styles.css'
 import SearchBar from './Components/SearchBar'
 import Popup from './Components/Popup'
 import Dashboard from './Components/Dashboard'
+import 'font-awesome/css/font-awesome.min.css'
 
 function App() {
   const [state, setState] = useState({
@@ -54,6 +55,8 @@ function App() {
   return (
     <div className="App">
       <header>
+        <button className="nomination"><i className="fa fa-trophy" aria-hidden="true"></i>
+        Nominations</button>
         <h1>The Shoppies:</h1>
         <h3>Movie awards for Entrepreneurs</h3>
       </header>

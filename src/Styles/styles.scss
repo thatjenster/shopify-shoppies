@@ -3,6 +3,7 @@
 @import './sass/searchbar';
 @import './sass/dashboard';
 @import './sass/popup';
+@import './sass/nominations';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Roboto&display=swap');
@@ -16,7 +17,8 @@ h1 {
     text-align: center;
     font-family: $mainFont;
     font-size: 45px;
-    color: #fff
+    color: #fff;
+    margin-top: 150px;
 }
 
 h3 {
