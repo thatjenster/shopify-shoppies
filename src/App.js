@@ -1,69 +1,71 @@
 import React, { useState } from 'react'
-import styles from './Styles/styles.css'
 import axios from 'axios'
+import style from './Styles/styles.css'
 import SearchBar from './Components/SearchBar'
-import Dashboard from './Components/Dashboard'
 import Popup from './Components/Popup'
+import Dashboard from './Components/Dashboard'
 
 function App() {
   const [state, setState] = useState({
-    content: '',
+    content: "",
     results: [],
-    choice: {}
+    choices: {}
   });
-
-  const apikey = 'http://www.omdbapi.com/?i=tt3896198&apikey=29a0ab3b';
+  const apikey = "http://www.omdbapi.com/?apikey=dfe6d885";
 
   const search = (e) => {
     if (e.key === "Enter") {
       axios(apikey + "&s=" + state.content).then(({ data }) => {
         let results = data.Search;
-        
+
         setState(prevState => {
-          return { ...prevState, results: results}
+          return { ...prevState, results: results }
         })
       });
     }
   }
-
+  
   const handleInput = (e) => {
     let content = e.target.value;
 
     setState(prevState => {
-      return { ...prevState, content: content}
+      return { ...prevState, content: content }
     });
   }
 
   const openPopup = id => {
     axios(apikey + "&i=" + id).then(({ data }) => {
       let result = data;
+
       console.log(result);
+
       setState(prevState => {
-        return { ...prevState, choice: result}
+        return { ...prevState, choices: result }
       });
     });
   }
 
   const closePopup = () => {
     setState(prevState => {
-      return { ...prevState, choice: {} }
+      return { ...prevState, choices: {} }
     });
   }
 
   return (
     <div className="App">
       <header>
-        <h1> The Shoppies: </h1>
-        <h3> Movie awards for Entrepreneurs </h3>
+        <h1>The Shoppies:</h1>
+        <h3>Movie awards for Entrepreneurs</h3>
       </header>
       <main>
-        <SearchBar handleInput={handleInput} search={search}/>
-        <Dashboard results={state.results} openPopup={openPopup}/>
+        <SearchBar handleInput={handleInput} search={search} />
 
-        {(typeof state.choice.Title != "undefined") ? <Popup choice={state.choice} closePopup={closePopup} /> : false}
+        <Dashboard results={state.results} openPopup={openPopup} />
+
+        {(typeof state.choices.Title != "undefined") ? <Popup choices={state.choices} closePopup={closePopup} /> : false}
       </main>
     </div>
   );
 }
 
-export default App;
+export default App

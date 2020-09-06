@@ -1,20 +1,18 @@
+  
 import React from 'react'
 
-const SearchBar = ({ handleInput, search }) => {
-    return (
-        <section className="search-wrapper">
-            <label htmlFor="search"></label>
-            <input 
-                type="text" 
-                placeholder="Seach for a movie..." 
-                id="search" 
-                className="search-bar" 
-                onChange={handleInput}
-                onKeyPress={search}
-            />
-        </section>
-    )
-
+function SearchBar ({ handleInput, search }) {
+	return (
+		<section className="search-wrap">
+			<input 
+				type="text" 
+				placeholder="Search for a movie..." 
+				className="search-bar " 
+				onChange={handleInput}
+				onKeyPress={search}
+			/>
+		</section>
+	)
 }
 
-export default SearchBar;
+export default SearchBar
