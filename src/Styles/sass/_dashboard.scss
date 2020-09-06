@@ -15,6 +15,7 @@
     img {
         display: block;
         width: 100%;
+        height: auto
     }
 
     h4 {
@@ -27,5 +28,23 @@
         background-color: $pink;
         text-align: center;
     }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+
+}
+
+.contentinfo {
+    display: block;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px;
 }
 

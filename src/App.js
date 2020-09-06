@@ -3,6 +3,7 @@ import styles from './Styles/styles.css'
 import axios from 'axios'
 import SearchBar from './Components/SearchBar'
 import Dashboard from './Components/Dashboard'
+import Popup from './Components/Popup'
 
 function App() {
   const [state, setState] = useState({
@@ -33,6 +34,22 @@ function App() {
     });
   }
 
+  const openPopup = id => {
+    axios(apikey + "&i=" + id).then(({ data }) => {
+      let result = data;
+      console.log(result);
+      setState(prevState => {
+        return { ...prevState, choice: result}
+      });
+    });
+  }
+
+  const closePopup = () => {
+    setState(prevState => {
+      return { ...prevState, choice: {} }
+    });
+  }
+
   return (
     <div className="App">
       <header>
@@ -41,7 +58,9 @@ function App() {
       </header>
       <main>
         <SearchBar handleInput={handleInput} search={search}/>
-        <Dashboard results={state.results} />
+        <Dashboard results={state.results} openPopup={openPopup}/>
+
+        {(typeof state.choice.Title != "undefined") ? <Popup choice={state.choice} closePopup={closePopup} /> : false}
       </main>
     </div>
   );

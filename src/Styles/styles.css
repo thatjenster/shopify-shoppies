@@ -283,6 +283,7 @@ html {
 .movieinfo img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 .movieinfo h4 {
@@ -297,6 +298,23 @@ html {
   transition: 0.4s ease-out;
   background-color: #E4C5AF;
   text-align: center;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.contentinfo {
+  display: block;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 * {
