@@ -6,7 +6,6 @@ import Popup from './Components/Popup'
 import Dashboard from './Components/Dashboard'
 import 'font-awesome/css/font-awesome.min.css'
 import Nominate from './Components/Nominate'
-import Nominations from './Components/Nominations'
 
 function App() {
   const [state, setState] = useState({
