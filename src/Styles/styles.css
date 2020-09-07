@@ -274,7 +274,6 @@ html {
 
 .movieinfo {
   width: 25%;
-  min-width: 250px;
   padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,6 +283,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .movieinfo img {
@@ -371,6 +371,22 @@ html {
   padding: 15px;
   font: 400 20px "Roboto", sans-serif;
   line-height: 2rem;
+}
+
+.btn-close {
+  font-size: 40px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+}
+
+.btn-close i {
+  color: #AF7595;
+  padding: 20px;
 }
 
 .btn {

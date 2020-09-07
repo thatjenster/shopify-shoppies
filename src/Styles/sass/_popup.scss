@@ -57,6 +57,18 @@
 	font: 400 20px $bodyFont;
 	line-height: 2rem;
 }
+.btn-close {
+	font-size: 40px;
+	font-weight: 700;
+	border: none;
+	outline: none;
+	appearance: none;
+	background: none;
+	i {
+		color: $mav;
+		padding: 20px;
+	}
+}
 
 .btn {
 	display: inline-block;
