@@ -6,11 +6,13 @@ import Popup from './Components/Popup'
 import Dashboard from './Components/Dashboard'
 import 'font-awesome/css/font-awesome.min.css'
 import Nominate from './Components/Nominate'
+import Nominations from './Components/Nominations'
 
 function App() {
   const [state, setState] = useState({
     content: "",
     results: [],
+    favourites: [],
     choices: {}
   });
   const apikey = "http://www.omdbapi.com/?apikey=dfe6d885";
@@ -53,23 +55,43 @@ function App() {
     });
   }
 
+  const addFavourite = id => {
+      axios(apikey + "&i=" + id).then(({ data }) => {
+      let result = data;
+        let tempArray = state.favourites;
+        tempArray.push(result);
+
+      setState(prevState => {
+
+        return { ...prevState, favourites: tempArray}
+      });
+    });
+    }
+
+
   return (
     <div className="App">
       <header>
-        <button className="nomination">
+
+        <div className="nomination" onClick={openPopup}>
         <i className="fa fa-trophy" aria-hidden="true"></i>
         Nominations
-        </button>
+        </div>
+
+        <Nominate title="Show Favourites" closePopup={closePopup} favourites={state.favourites}/>
+
         <h1>The Shoppies:</h1>
         <h3>Movie awards for Entrepreneurs</h3>
       </header>
+
       <main>
         <SearchBar handleInput={handleInput} search={search} />
 
         <Dashboard results={state.results} openPopup={openPopup} />
 
-        {(typeof state.choices.Title != "undefined") ? <Popup choices={state.choices} closePopup={closePopup} /> : false}
+        {(typeof state.choices.Title != "undefined") ? <Popup choices={state.choices} closePopup={closePopup} addFavourite={addFavourite}/> : false}
       </main>
+
     </div>
   );
 }

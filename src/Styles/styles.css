@@ -306,6 +306,11 @@ html {
   text-align: center;
 }
 
+.movieinfo span {
+  display: block;
+  color: #1F487E;
+}
+
 .popup {
   position: fixed;
   top: 0;

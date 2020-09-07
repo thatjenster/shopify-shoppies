@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Popup({ choices, closePopup }) {
+function Popup({ choices, closePopup, addFavourite }) {
+	console.log(addFavourite);
 	return (
 		<section className="popup">
 			<button className="btn-close" onClick={closePopup}><i className="fa fa-times" aria-hidden="true"></i>
@@ -14,7 +15,8 @@ function Popup({ choices, closePopup }) {
 					<img src={choices.Poster} />
 					<p>{choices.Plot}</p>
 				</div>
-				<button className="btn nom">Nominate Me</button>
+
+				<button className="btn nom" onClick={() => addFavourite(choices.imdbID)}>Nominate Me</button> }
 			</div>
 		</section>
 	)
