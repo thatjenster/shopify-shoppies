@@ -68,6 +68,12 @@ function App() {
     });
     }
 
+  const removeFavourties = (index) => {
+    const favourites = this.state.favourites;
+    favourites.splice(index, 1);
+    this.setState({ favourites });
+  }
+
 
   return (
     <div className="App">
@@ -78,7 +84,7 @@ function App() {
         Nominations
         </div>
 
-        <Nominate title="Show Favourites" closePopup={closePopup} favourites={state.favourites}/>
+        <Nominate title="Show Favourites" closePopup={closePopup} favourites={state.favourites} removeFavourties={removeFavourties}/>
 
         <h1>The Shoppies:</h1>
         <h3>Movie awards for Entrepreneurs</h3>

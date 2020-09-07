@@ -16,7 +16,7 @@ function Popup({ choices, closePopup, addFavourite }) {
 					<p>{choices.Plot}</p>
 				</div>
 
-				<button className="btn nom" onClick={() => addFavourite(choices.imdbID)}>Nominate Me</button> }
+				<button className="btn nom" onClick={() => addFavourite(choices.imdbID)}>Nominate Me</button> 
 			</div>
 		</section>
 	)

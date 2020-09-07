@@ -35,9 +35,15 @@ class Nominate extends Component {
                 </div>
                     
 				{opened && (					
-					<div class="boxContent">
+					<div className="boxcontent">
+                        <h2>My Nominations</h2>
 						{this.props.favourites.map(favourite => (
-                            <img src={favourite.Poster} />
+                            <div className="flexfav" key={favourite.imdbID}>
+                                <div className="myfav">
+                                    <img src={favourite.Poster} />
+                                    <button onClick={this.removeFavourites}>Remove</button>
+                                </div>
+                            </div>
                         ))}
 					</div>
 				)}
