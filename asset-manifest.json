@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/shopify-shoppies/static/css/main.3a0cfa26.chunk.css",
-    "main.js": "/shopify-shoppies/static/js/main.548a6926.chunk.js",
-    "main.js.map": "/shopify-shoppies/static/js/main.548a6926.chunk.js.map",
+    "main.js": "/shopify-shoppies/static/js/main.537fe2b7.chunk.js",
+    "main.js.map": "/shopify-shoppies/static/js/main.537fe2b7.chunk.js.map",
     "runtime-main.js": "/shopify-shoppies/static/js/runtime-main.9e6f0c2a.js",
     "runtime-main.js.map": "/shopify-shoppies/static/js/runtime-main.9e6f0c2a.js.map",
     "static/css/2.16862625.chunk.css": "/shopify-shoppies/static/css/2.16862625.chunk.css",
-    "static/js/2.cde30f8d.chunk.js": "/shopify-shoppies/static/js/2.cde30f8d.chunk.js",
-    "static/js/2.cde30f8d.chunk.js.map": "/shopify-shoppies/static/js/2.cde30f8d.chunk.js.map",
+    "static/js/2.8f466076.chunk.js": "/shopify-shoppies/static/js/2.8f466076.chunk.js",
+    "static/js/2.8f466076.chunk.js.map": "/shopify-shoppies/static/js/2.8f466076.chunk.js.map",
     "index.html": "/shopify-shoppies/index.html",
-    "precache-manifest.0d70acdd5e195a80dfecbe2e6773a324.js": "/shopify-shoppies/precache-manifest.0d70acdd5e195a80dfecbe2e6773a324.js",
+    "precache-manifest.df2826cf4ac33b22eb780f94927a8eba.js": "/shopify-shoppies/precache-manifest.df2826cf4ac33b22eb780f94927a8eba.js",
     "service-worker.js": "/shopify-shoppies/service-worker.js",
     "static/css/2.16862625.chunk.css.map": "/shopify-shoppies/static/css/2.16862625.chunk.css.map",
     "static/css/main.3a0cfa26.chunk.css.map": "/shopify-shoppies/static/css/main.3a0cfa26.chunk.css.map",
-    "static/js/2.cde30f8d.chunk.js.LICENSE.txt": "/shopify-shoppies/static/js/2.cde30f8d.chunk.js.LICENSE.txt",
+    "static/js/2.8f466076.chunk.js.LICENSE.txt": "/shopify-shoppies/static/js/2.8f466076.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/shopify-shoppies/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.9e6f0c2a.js",
     "static/css/2.16862625.chunk.css",
-    "static/js/2.cde30f8d.chunk.js",
+    "static/js/2.8f466076.chunk.js",
     "static/css/main.3a0cfa26.chunk.css",
-    "static/js/main.548a6926.chunk.js"
+    "static/js/main.537fe2b7.chunk.js"
   ]
 }
