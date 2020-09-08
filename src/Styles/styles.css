@@ -468,9 +468,17 @@ html {
 }
 
 .boxcontent h2 {
-  color: #fff;
-  font: 400 3rem "Martel Sans", sans-serif;
-  text-align: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 5rem;
+  letter-spacing: 0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #fff;
+  text-shadow: 8px 8px #AF7595, 20px 20px #000000;
 }
 
 .flexfav {
@@ -492,15 +500,16 @@ html {
 h1 {
   text-align: center;
   font-family: "Martel Sans", sans-serif;
-  font-size: 45px;
+  font-size: 4rem;
   color: #fff;
   margin-top: 150px;
+  letter-spacing: 0.4rem;
 }
 
 h3 {
   text-align: center;
   font-family: "Martel Sans", sans-serif;
-  font-size: 30px;
+  font-size: 3rem;
   padding: 15px;
   color: #fff;
 }

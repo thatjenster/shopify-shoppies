@@ -6,4 +6,19 @@ $bodyFont: 'Roboto', sans-serif;
 
 $black: #1B1719;
 $pink: #E4C5AF;
-$mav: #AF7595
+$mav: #AF7595;
+
+@mixin textEffect {
+    position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+        letter-spacing: 0.1em;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: #fff;
+        text-shadow: 
+                              8px 8px $mav,
+                              20px 20px #000000;
+}

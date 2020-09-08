@@ -100,7 +100,7 @@ function App() {
       <header>
         <Nominate title="Show Favourites" closePopup={closePopup} favourites={state.favourites} removeItem={removeItem} />
 
-        <h1>The Shoppies:</h1>
+        <h1 className="header-text">The Shoppies:</h1>
         <h3>Movie awards for Entrepreneurs</h3>
       </header>
       <main>
