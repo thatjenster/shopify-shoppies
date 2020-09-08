@@ -1,8 +1,8 @@
 import React from 'react'
-import Swal from 'sweetalert2';
 
-function Popup({ choices, closePopup, addFavourite }) {
-	console.log(addFavourite);
+function Popup({ choices, closePopup, addFavourite, checkDuplicate }) {
+	console.log(closePopup);
+
 	return (
 		<section className="popup">
 			<button className="btn-close" onClick={closePopup}><i className="fa fa-times" aria-hidden="true"></i>
@@ -16,9 +16,9 @@ function Popup({ choices, closePopup, addFavourite }) {
 					<img src={choices.Poster} />
 					<p>{choices.Plot}</p>
 				</div>
-			
-				<button className="btn nom" onClick={() => addFavourite(choices.imdbID)} >Nominate Me</button> 
-				
+
+					{(!checkDuplicate(choices.imdbID)) ? <button className="btn nom" onClick={() => addFavourite(choices.imdbID)} > Nominate Me! </button> : <a></a> }
+	
 			</div>
 		</section>
 	)

@@ -56,14 +56,13 @@ function App() {
   }
 
   const addFavourite = id => {
-    if (state.favourites.length < 5) {
-      console.log(state.favourites.length);
+    const duplicated =  checkDuplicate(id);
+    if (state.favourites.length < 5 ) {
       axios(apikey + "&i=" + id).then(({ data }) => {
       let result = data;
         let tempArray = state.favourites;
         tempArray.push(result);
       setState(prevState => {
-
         return { ...prevState, favourites: tempArray}
       });
     });
@@ -75,7 +74,7 @@ function App() {
       showCloseButtonColor: 'pink'
   })
   }
-    }
+}
 
   const removeItem = index => {
 
@@ -86,11 +85,21 @@ function App() {
     });
   }
 
+  const checkDuplicate = (id) => {
+    let favourites = state.favourites;
+    let x;
+    for (x of favourites ) {
+        if (id == x.imdbID){
+          return true;
+        }
+    }
+    return false;
+  }
 
   return (
     <div className="App">
       <header>
-        <Nominate title="Show Favourites" closePopup={closePopup} favourites={state.favourites} removeItem={removeItem}/>
+        <Nominate title="Show Favourites" closePopup={closePopup} favourites={state.favourites} removeItem={removeItem} />
 
         <h1>The Shoppies:</h1>
         <h3>Movie awards for Entrepreneurs</h3>
@@ -100,7 +109,7 @@ function App() {
 
         <Dashboard results={state.results} openPopup={openPopup} />
 
-        {(typeof state.choices.Title != "undefined") ? <Popup choices={state.choices} favourites={state.favourites} closePopup={closePopup} addFavourite={addFavourite}/> : false}
+        {(typeof state.choices.Title != "undefined") ? <Popup choices={state.choices} favourites={state.favourites} closePopup={closePopup} addFavourite={addFavourite} checkDuplicate={checkDuplicate}/> : false}
       </main>
     </div>
   );
