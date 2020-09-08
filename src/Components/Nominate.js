@@ -18,7 +18,7 @@ class Nominate extends Component {
 	}
   
 	render() {
-		let { title, children } = this.props;
+		let { title } = this.props;
 		const { opened } = this.state;
 
 		if (opened){
@@ -31,7 +31,7 @@ class Nominate extends Component {
 			<div className="box">
 				<div className="nomination" onClick={this.nominate}>
                     <i className="fa fa-trophy" aria-hidden="true"></i>
-                    Nominations
+                    {(title === "Show Favourites") ? "Nominations" : "Close"}
                 </div>
                     
 				{opened && (					
@@ -41,7 +41,7 @@ class Nominate extends Component {
                             <div className="flexfav" key={favourite.imdbID}>
                                 <div className="myfav">
                                     <img src={favourite.Poster} />
-                                    <button onClick={this.removeFavourites}>Remove</button>
+                                    <button onClick={() => this.props.removeItem(favourite.imdbID)}>Remove</button>
                                 </div>
                             </div>
                         ))}

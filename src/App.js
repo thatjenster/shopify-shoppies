@@ -67,28 +67,24 @@ function App() {
     });
     }
 
-  const removeFavourties = (index) => {
-    const favourites = this.state.favourites;
+  const removeItem = index => {
+
+    const favourites = state.favourites;
     favourites.splice(index, 1);
-    this.setState({ favourites });
+    setState(prevState => {
+      return { ...prevState, favourites: favourites}
+    });
   }
 
 
   return (
     <div className="App">
       <header>
-
-        <div className="nomination" onClick={openPopup}>
-        <i className="fa fa-trophy" aria-hidden="true"></i>
-        Nominations
-        </div>
-
-        <Nominate title="Show Favourites" closePopup={closePopup} favourites={state.favourites} removeFavourties={removeFavourties}/>
+        <Nominate title="Show Favourites" closePopup={closePopup} favourites={state.favourites} removeItem={removeItem}/>
 
         <h1>The Shoppies:</h1>
         <h3>Movie awards for Entrepreneurs</h3>
       </header>
-
       <main>
         <SearchBar handleInput={handleInput} search={search} />
 
@@ -96,7 +92,6 @@ function App() {
 
         {(typeof state.choices.Title != "undefined") ? <Popup choices={state.choices} closePopup={closePopup} addFavourite={addFavourite}/> : false}
       </main>
-
     </div>
   );
 }
