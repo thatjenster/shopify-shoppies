@@ -15,7 +15,7 @@ function App() {
     favourites: [],
     choices: {}
   });
-  const apikey = "http://www.omdbapi.com/?apikey=dfe6d885";
+  const apikey = "https://www.omdbapi.com/?apikey=dfe6d885";
 
   const search = (e) => {
     if (e.key === "Enter") {
@@ -31,7 +31,6 @@ function App() {
   
   const handleInput = (e) => {
     let content = e.target.value;
-
     setState(prevState => {
       return { ...prevState, content: content }
     });
