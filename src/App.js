@@ -59,10 +59,10 @@ function App() {
     if (state.favourites.length < 5 ) {
       axios(apikey + "&i=" + id).then(({ data }) => {
       let result = data;
-        let tempArray = state.favourites;
-        tempArray.push(result);
+        let newNominations = state.favourites;
+        newNominations.push(result);
       setState(prevState => {
-        return { ...prevState, favourites: tempArray}
+        return { ...prevState, favourites: newNominations}
       });
     });
   } else {
