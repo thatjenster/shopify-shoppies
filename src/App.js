@@ -6,6 +6,7 @@ import Popup from './Components/Popup'
 import Dashboard from './Components/Dashboard'
 import 'font-awesome/css/font-awesome.min.css'
 import Nominate from './Components/Nominate'
+import Swal from 'sweetalert2';
 
 function App() {
   const [state, setState] = useState({
@@ -55,16 +56,25 @@ function App() {
   }
 
   const addFavourite = id => {
+    if (state.favourites.length < 5) {
+      console.log(state.favourites.length);
       axios(apikey + "&i=" + id).then(({ data }) => {
       let result = data;
         let tempArray = state.favourites;
         tempArray.push(result);
-
       setState(prevState => {
 
         return { ...prevState, favourites: tempArray}
       });
     });
+  } else {
+    Swal.fire({
+      title: 'You can only nominate 5 movies',
+      showConfirmButton: false,
+      showCloseButton: true,
+      showCloseButtonColor: 'pink'
+  })
+  }
     }
 
   const removeItem = index => {
@@ -90,7 +100,7 @@ function App() {
 
         <Dashboard results={state.results} openPopup={openPopup} />
 
-        {(typeof state.choices.Title != "undefined") ? <Popup choices={state.choices} closePopup={closePopup} addFavourite={addFavourite}/> : false}
+        {(typeof state.choices.Title != "undefined") ? <Popup choices={state.choices} favourites={state.favourites} closePopup={closePopup} addFavourite={addFavourite}/> : false}
       </main>
     </div>
   );

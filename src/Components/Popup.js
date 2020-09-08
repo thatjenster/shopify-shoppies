@@ -1,4 +1,5 @@
 import React from 'react'
+import Swal from 'sweetalert2';
 
 function Popup({ choices, closePopup, addFavourite }) {
 	console.log(addFavourite);
@@ -15,8 +16,9 @@ function Popup({ choices, closePopup, addFavourite }) {
 					<img src={choices.Poster} />
 					<p>{choices.Plot}</p>
 				</div>
-
+			
 				<button className="btn nom" onClick={() => addFavourite(choices.imdbID)} >Nominate Me</button> 
+				
 			</div>
 		</section>
 	)
