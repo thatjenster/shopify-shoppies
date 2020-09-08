@@ -30,8 +30,7 @@ class Nominate extends Component {
 		return (
 			<div className="box">
 				<div className="nomination" onClick={this.nominate}>
-                    <i className="fa fa-trophy" aria-hidden="true"></i>
-                    {(title === "Show Favourites") ? "Nominations" : "Close"}
+                    {(title === "Show Favourites") ? <h2><i className="fa fa-trophy" aria-hidden="true"></i>Nominations</h2> : <h2>Close</h2>}
                 </div>
                     
 				{opened && (					
@@ -39,9 +38,12 @@ class Nominate extends Component {
                         <h2>My Nominations</h2>
 						{this.props.favourites.map(favourite => (
                             <div className="flexfav" key={favourite.imdbID}>
-                                <div className="myfav">
+                                <div className="image-container">
                                     <img src={favourite.Poster} />
-                                    <button onClick={() => this.props.removeItem(favourite.imdbID)}>Remove</button>
+                                </div>
+                                <div className="info-movie">
+                                    <h1>{favourite.Title}</h1>
+                                    <button className="btn" onClick={() => this.props.removeItem(favourite.imdbID)}>Remove</button>
                                 </div>
                             </div>
                         ))}

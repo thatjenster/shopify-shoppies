@@ -1,10 +1,17 @@
 import React from 'react'
 
 function MovieResults({ result, openPopup }) {
+	console.log(result);
 	return (
 		<div className="movieinfo" onClick={() => openPopup(result.imdbID)}>
-			<img src={result.Poster} />
-			<h4>{result.Title}<span>View Details</span></h4>
+			<div className="image-container">
+				<img src={result.Poster} />
+			</div>
+			<div className="info-movie">
+				<h1>{result.Title}</h1>
+				<h2 className="extra">Released Year: {result.Year}</h2>
+				<button className="btn">View Details</button>
+			</div>
 		</div>
 	)
 }

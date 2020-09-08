@@ -1,8 +1,6 @@
 import React from 'react'
 
 function Popup({ choices, closePopup, addFavourite, checkDuplicate }) {
-	console.log(closePopup);
-
 	return (
 		<section className="popup">
 			<button className="btn-close" onClick={closePopup}><i className="fa fa-times" aria-hidden="true"></i>
