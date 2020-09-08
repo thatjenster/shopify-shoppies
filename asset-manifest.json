@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/thatjenster/shopify-shoppies/static/css/main.3a0cfa26.chunk.css",
+    "main.js": "/thatjenster/shopify-shoppies/static/js/main.001c87dc.chunk.js",
+    "main.js.map": "/thatjenster/shopify-shoppies/static/js/main.001c87dc.chunk.js.map",
+    "runtime-main.js": "/thatjenster/shopify-shoppies/static/js/runtime-main.76b84641.js",
+    "runtime-main.js.map": "/thatjenster/shopify-shoppies/static/js/runtime-main.76b84641.js.map",
+    "static/css/2.1a8d7220.chunk.css": "/thatjenster/shopify-shoppies/static/css/2.1a8d7220.chunk.css",
+    "static/js/2.cde30f8d.chunk.js": "/thatjenster/shopify-shoppies/static/js/2.cde30f8d.chunk.js",
+    "static/js/2.cde30f8d.chunk.js.map": "/thatjenster/shopify-shoppies/static/js/2.cde30f8d.chunk.js.map",
+    "index.html": "/thatjenster/shopify-shoppies/index.html",
+    "precache-manifest.c6aabe602af870210d6c0500a207da76.js": "/thatjenster/shopify-shoppies/precache-manifest.c6aabe602af870210d6c0500a207da76.js",
+    "service-worker.js": "/thatjenster/shopify-shoppies/service-worker.js",
+    "static/css/2.1a8d7220.chunk.css.map": "/thatjenster/shopify-shoppies/static/css/2.1a8d7220.chunk.css.map",
+    "static/css/main.3a0cfa26.chunk.css.map": "/thatjenster/shopify-shoppies/static/css/main.3a0cfa26.chunk.css.map",
+    "static/js/2.cde30f8d.chunk.js.LICENSE.txt": "/thatjenster/shopify-shoppies/static/js/2.cde30f8d.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/thatjenster/shopify-shoppies/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76b84641.js",
+    "static/css/2.1a8d7220.chunk.css",
+    "static/js/2.cde30f8d.chunk.js",
+    "static/css/main.3a0cfa26.chunk.css",
+    "static/js/main.001c87dc.chunk.js"
+  ]
+}
