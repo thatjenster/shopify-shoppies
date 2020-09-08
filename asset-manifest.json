@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/shopify-shoppies/static/css/main.3a0cfa26.chunk.css",
-    "main.js": "/shopify-shoppies/static/js/main.537fe2b7.chunk.js",
-    "main.js.map": "/shopify-shoppies/static/js/main.537fe2b7.chunk.js.map",
+    "main.js": "/shopify-shoppies/static/js/main.6603af25.chunk.js",
+    "main.js.map": "/shopify-shoppies/static/js/main.6603af25.chunk.js.map",
     "runtime-main.js": "/shopify-shoppies/static/js/runtime-main.9e6f0c2a.js",
     "runtime-main.js.map": "/shopify-shoppies/static/js/runtime-main.9e6f0c2a.js.map",
     "static/css/2.16862625.chunk.css": "/shopify-shoppies/static/css/2.16862625.chunk.css",
     "static/js/2.8f466076.chunk.js": "/shopify-shoppies/static/js/2.8f466076.chunk.js",
     "static/js/2.8f466076.chunk.js.map": "/shopify-shoppies/static/js/2.8f466076.chunk.js.map",
     "index.html": "/shopify-shoppies/index.html",
-    "precache-manifest.df2826cf4ac33b22eb780f94927a8eba.js": "/shopify-shoppies/precache-manifest.df2826cf4ac33b22eb780f94927a8eba.js",
+    "precache-manifest.67f2125b57f8d1eaa4cc5d0861b66380.js": "/shopify-shoppies/precache-manifest.67f2125b57f8d1eaa4cc5d0861b66380.js",
     "service-worker.js": "/shopify-shoppies/service-worker.js",
     "static/css/2.16862625.chunk.css.map": "/shopify-shoppies/static/css/2.16862625.chunk.css.map",
     "static/css/main.3a0cfa26.chunk.css.map": "/shopify-shoppies/static/css/main.3a0cfa26.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.16862625.chunk.css",
     "static/js/2.8f466076.chunk.js",
     "static/css/main.3a0cfa26.chunk.css",
-    "static/js/main.537fe2b7.chunk.js"
+    "static/js/main.6603af25.chunk.js"
   ]
 }
