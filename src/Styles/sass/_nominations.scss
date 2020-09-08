@@ -33,9 +33,7 @@
     overflow-y: scroll;
     padding-top: 100px;
     h2 {
-        color: #fff;
-        font: 400 3rem $mainFont;
-        text-align: center;
+        @include textEffect;
     }
 }
 
